@@ -33,6 +33,24 @@ public class homePageTest extends ScriptBase {
         homePage.productSearch("Hat",driver,"7");
     }
 
+    @Test
+    public void verifyShoeSearch(){
+        homePage=new HomePage(driver);
+        homePage.productSearchOne("Shoe",driver,"7");
+    }
+
+    @Test
+    public void verifyDressSearch(){
+        homePage=new HomePage(driver);
+        homePage.productSearchTwo("Dress",driver,"7");
+    }
+
+    @Test
+    public void verifyBlouseSearch(){
+        homePage=new HomePage(driver);
+        homePage.productSearchThree("Blouse",driver,"1");
+    }
+
 
 
     @AfterTest

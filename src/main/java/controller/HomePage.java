@@ -40,5 +40,26 @@ public class HomePage extends ScriptBase {
 
     }
 
+    public void productSearchOne(String productName,WebDriver driver,String quantity){
+        SearchSendKey.sendKeys(productName);
+        searchButton.click();
+        driver.findElement(By.xpath("//*[@id='center_column']//span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed();
+
+    }
+
+    public void productSearchTwo(String productName,WebDriver driver,String quantity){
+        SearchSendKey.sendKeys(productName);
+        searchButton.click();
+        driver.findElement(By.xpath("//*[@id='center_column']//span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed();
+
+    }
+
+    public void productSearchThree(String productName,WebDriver driver,String quantity){
+        SearchSendKey.sendKeys(productName);
+        searchButton.click();
+        driver.findElement(By.xpath("//*[@id='center_column']//span[contains(text(),'"+quantity+" result has been found.')]")).isDisplayed();
+
+    }
+
 
 }
