@@ -20,6 +20,7 @@ public class HomePage extends ScriptBase {
 
 
 
+
     public HomePage(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
@@ -58,6 +59,12 @@ public class HomePage extends ScriptBase {
         SearchSendKey.sendKeys(productName);
         searchButton.click();
         driver.findElement(By.xpath("//*[@id='center_column']//span[contains(text(),'"+quantity+" result has been found.')]")).isDisplayed();
+
+    }
+
+    public void categorySearch(WebDriver driver,String categorySelect){
+
+        driver.findElement(By.xpath("//*[@id='block_top_menu']//li[1]/a[@title='"+categorySelect+"']")).isDisplayed();
 
     }
 
