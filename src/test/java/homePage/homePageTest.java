@@ -51,6 +51,18 @@ public class homePageTest extends ScriptBase {
         homePage.productSearchThree("Blouse",driver,"1");
     }
 
+    @Test
+    public void verifyWomenButton(){
+        homePage=new HomePage(driver);
+        homePage.categorySearch(driver,"Women");
+    }
+
+    @Test
+    public void verifyTshirtButton(){
+        homePage=new HomePage(driver);
+        homePage.categorySearch(driver,"T-shirts");
+    }
+
 
 
     @AfterTest
