@@ -63,8 +63,22 @@ public class HomePage extends ScriptBase {
     }
 
     public void categorySearch(WebDriver driver,String categorySelect){
-
         driver.findElement(By.xpath("//*[@id='block_top_menu']//li[1]/a[@title='"+categorySelect+"']")).isDisplayed();
+
+    }
+
+    public void featureSearch(WebDriver driver,String categorySelect){
+        driver.findElement(By.xpath("//*[@id='home-page-tabs']//a[@class='"+categorySelect+"']")).isDisplayed();
+
+    }
+
+    public void informationSearch(WebDriver driver,String categorySelect){
+        driver.findElement(By.xpath("//*[@id='block_various_links_footer']//a[@title='"+categorySelect+"']")).isDisplayed();
+
+    }
+
+    public void accountSearch(WebDriver driver,String categorySelect){
+        driver.findElement(By.xpath("//*[@id='footer']//a[@title='"+categorySelect+"']")).isDisplayed();
 
     }
 
