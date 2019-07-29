@@ -63,6 +63,84 @@ public class homePageTest extends ScriptBase {
         homePage.categorySearch(driver,"T-shirts");
     }
 
+    @Test
+    public void verifyPopularButton(){
+        homePage=new HomePage(driver);
+        homePage.featureSearch(driver,"homefeatured");
+    }
+
+    @Test
+    public void verifyBestSellersButton(){
+        homePage=new HomePage(driver);
+        homePage.featureSearch(driver,"blockbestsellers");
+    }
+
+    @Test
+    public void verifySpecialsButton(){
+        homePage=new HomePage(driver);
+        homePage.informationSearch(driver,"Specials");
+    }
+
+    @Test
+    public void verifyNewProductsButton(){
+        homePage=new HomePage(driver);
+        homePage.informationSearch(driver,"New products");
+    }
+
+    @Test
+    public void verifyBestsellersButton(){
+        homePage=new HomePage(driver);
+        homePage.informationSearch(driver,"Best sellers");
+    }
+
+    @Test
+    public void verifyOurStoresButton(){
+        homePage=new HomePage(driver);
+        homePage.informationSearch(driver,"Our stores");
+    }
+
+    @Test
+    public void verifyContactUsButton(){
+        homePage=new HomePage(driver);
+        homePage.informationSearch(driver,"Contact us");
+    }
+
+    @Test
+    public void verifyAboutUsButton(){
+        homePage=new HomePage(driver);
+        homePage.informationSearch(driver,"About us");
+    }
+
+    @Test
+    public void verifySitemapButton(){
+        homePage=new HomePage(driver);
+        homePage.informationSearch(driver,"Sitemap");
+    }
+
+    @Test
+    public void verifyMyOrdersButton(){
+        homePage=new HomePage(driver);
+        homePage.accountSearch(driver,"My orders");
+    }
+
+    @Test
+    public void verifyMyCreditSlipsButton(){
+        homePage=new HomePage(driver);
+        homePage.accountSearch(driver,"My credit slips");
+    }
+
+    @Test
+    public void verifyMyAddressesButton(){
+        homePage=new HomePage(driver);
+        homePage.accountSearch(driver,"My addresses");
+    }
+
+    @Test
+    public void verifyMyPersonalinfoButton(){
+        homePage=new HomePage(driver);
+        homePage.accountSearch(driver,"Manage my personal information");
+    }
+
 
 
     @AfterTest
