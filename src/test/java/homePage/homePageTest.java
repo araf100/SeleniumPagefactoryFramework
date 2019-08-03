@@ -66,13 +66,13 @@ public class homePageTest extends ScriptBase {
     @Test
     public void verifyPopularButton(){
         homePage=new HomePage(driver);
-        homePage.featureSearch(driver,"homefeatured");
+        homePage.featureSearch(driver,"Popular");
     }
 
     @Test
     public void verifyBestSellersButton(){
         homePage=new HomePage(driver);
-        homePage.featureSearch(driver,"blockbestsellers");
+        homePage.featureSearch(driver,"Best Sellers");
     }
 
     @Test
@@ -141,12 +141,20 @@ public class homePageTest extends ScriptBase {
         homePage.accountSearch(driver,"Manage my personal information");
     }
 
+    @Test
+    public void verifyCustomerService(){
+        homePage=new HomePage(driver);
+        homePage.customerService();
+    }
+
+
+
 
 
     @AfterTest
     public void closebrowser(){
-        //driver.close();
-        //driver.quit();
+        driver.close();
+        driver.quit();
     }
 
 

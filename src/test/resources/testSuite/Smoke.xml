@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/ashraf/Documents/SeleniumPagefactoryFramework">
+        <classes>
+            <class name="homePage.homePageTest">
+            </class>
+            <class name="login.LoginTest">
+                <methods>
+                    <include name="invalidLoginVerify"/>
+                    <include name="validLoginVerify"/>
+                    <include name="validLoginWithLogOutVerify"/>
+                    <include name="invalidCreateAccountVerify"/>
+                    <include name="invalidSignUpAccountVerify"/>
+                </methods>
+            </class>
+            <class name="login.LoginTestTwo">
+                <methods>
+                    <include name="loginButtonVerify"/>
+                    <include name="loginButtonVerifyOne"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

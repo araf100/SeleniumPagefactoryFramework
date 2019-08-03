@@ -2,6 +2,7 @@ package controller;
 
 import base.ScriptBase;
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,9 +15,12 @@ public class HomePage extends ScriptBase {
     WebElement CallUs;
     @FindBy(css = "#header > div.nav > div > div > nav > span > strong")WebElement PhoneNumber;
     @FindBy(css = "#contact-link > a")WebElement ContactUs;
+    @FindBy(css = "#center_column > h1")WebElement customerService;
     @FindBy(xpath ="//a[@class='login']") WebElement SignIn;
     @FindBy(id= "search_query_top")WebElement SearchSendKey;
     @FindBy(css = "#searchbox > button")WebElement searchButton;
+    @FindBy(css = "#header_logo > a > img")WebElement homepageNavigation;
+
 
 
 
@@ -38,6 +42,7 @@ public class HomePage extends ScriptBase {
         SearchSendKey.sendKeys(productName);
         searchButton.click();
         driver.findElement(By.xpath("//*[@id='center_column']//span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed();
+        SearchSendKey.clear();
 
     }
 
@@ -45,6 +50,8 @@ public class HomePage extends ScriptBase {
         SearchSendKey.sendKeys(productName);
         searchButton.click();
         driver.findElement(By.xpath("//*[@id='center_column']//span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed();
+        SearchSendKey.clear();
+
 
     }
 
@@ -52,6 +59,7 @@ public class HomePage extends ScriptBase {
         SearchSendKey.sendKeys(productName);
         searchButton.click();
         driver.findElement(By.xpath("//*[@id='center_column']//span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed();
+        SearchSendKey.clear();
 
     }
 
@@ -59,6 +67,7 @@ public class HomePage extends ScriptBase {
         SearchSendKey.sendKeys(productName);
         searchButton.click();
         driver.findElement(By.xpath("//*[@id='center_column']//span[contains(text(),'"+quantity+" result has been found.')]")).isDisplayed();
+        SearchSendKey.clear();
 
     }
 
@@ -68,7 +77,8 @@ public class HomePage extends ScriptBase {
     }
 
     public void featureSearch(WebDriver driver,String categorySelect){
-        driver.findElement(By.xpath("//*[@id='home-page-tabs']//a[@class='"+categorySelect+"']")).isDisplayed();
+        homepageNavigation.click();
+        driver.findElement(By.xpath("//*[@id='home-page-tabs']//a[contains(text(),'"+categorySelect+"')]")).isDisplayed();
 
     }
 
@@ -79,6 +89,12 @@ public class HomePage extends ScriptBase {
 
     public void accountSearch(WebDriver driver,String categorySelect){
         driver.findElement(By.xpath("//*[@id='footer']//a[@title='"+categorySelect+"']")).isDisplayed();
+
+    }
+
+    public void customerService(){
+       ContactUs.click();
+       Assert.assertEquals(customerService,customerService);
 
     }
 
