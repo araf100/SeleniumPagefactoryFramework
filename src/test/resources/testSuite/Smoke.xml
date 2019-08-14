@@ -3,21 +3,9 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="/Users/ashraf/Documents/SeleniumPagefactoryFramework">
         <classes>
-            <class name="homePage.homePageTest">
-            </class>
-            <class name="login.LoginTest">
+            <class name="contactPage.ContactPageTest">
                 <methods>
-                    <include name="invalidLoginVerify"/>
-                    <include name="validLoginVerify"/>
-                    <include name="validLoginWithLogOutVerify"/>
-                    <include name="invalidCreateAccountVerify"/>
-                    <include name="invalidSignUpAccountVerify"/>
-                </methods>
-            </class>
-            <class name="login.LoginTestTwo">
-                <methods>
-                    <include name="loginButtonVerify"/>
-                    <include name="loginButtonVerifyOne"/>
+                    <include name="verifyCustomerService"/>
                 </methods>
             </class>
         </classes>
