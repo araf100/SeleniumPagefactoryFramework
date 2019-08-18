@@ -18,9 +18,6 @@ public class ContactPage extends ScriptBase {
     @FindBy(xpath = "//*[@id='id_order']")WebElement idOrder;
     @FindBy(xpath = "//*[@id='submitMessage']")WebElement submitSend;
     @FindBy(css = "#center_column > div > p")WebElement oneErrorMessage;
-    @FindBy(xpath = "//*[@id='header']//a[@title='View my shopping cart']")WebElement cartButton;
-    @FindBy(xpath = "//*[@id='cart_title']")WebElement shoppingCartSummary;
-    @FindBy(xpath = "//*[@id='center_column']/p")WebElement yourShoppingCartEmpty;
 
 
 
@@ -44,16 +41,6 @@ public class ContactPage extends ScriptBase {
         select.selectByVisibleText(value);
     }
 
-    public void viewCart(WebDriver driver,String order_step){
-        cartButton.click();
-        Assert.assertEquals(shoppingCartSummary,shoppingCartSummary);
-        driver.findElement(By.xpath("//*[@id='order_step']//span[contains(text(),'"+order_step+"')]")).isDisplayed();
-        Assert.assertEquals(yourShoppingCartEmpty,yourShoppingCartEmpty);
-
-
-
-
-    }
 
 
 

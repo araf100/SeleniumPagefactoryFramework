@@ -21,25 +21,5 @@ public class ContactPageTest extends ScriptBase {
         contactPage=new ContactPage(driver);
         contactPage.customerContact("test@gmail.com","Ashraf Khan","Customer service");
     }
-
-    @Test
-    public void verifyViewCart(){
-        contactPage=new ContactPage(driver);
-        contactPage.viewCart(driver,"Summary");
-        contactPage.viewCart(driver,"Sign in");
-        contactPage.viewCart(driver,"Address");
-        contactPage.viewCart(driver,"Shipping");
-        contactPage.viewCart(driver,"Payment");
-
-    }
-
-
-
-
-    @AfterTest
-    public void closebrowser(){
-        //driver.close();
-        //driver.quit();
-    }
-
 }
+
