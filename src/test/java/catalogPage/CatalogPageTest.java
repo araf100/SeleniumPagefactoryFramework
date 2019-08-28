@@ -13,6 +13,7 @@ public class CatalogPageTest extends ScriptBase {
 
     @BeforeTest
     public void beforetest(){
+
         init();
     }
 
@@ -72,7 +73,12 @@ public class CatalogPageTest extends ScriptBase {
 
     }
 
+    @Test
+    public void verifyWomenFilerProduct(){
+        catalogPage=new CatalogPage(driver);
+        catalogPage.womenCatalogeFilter("Tops","T-shirts",driver);
 
+    }
 
 
 
