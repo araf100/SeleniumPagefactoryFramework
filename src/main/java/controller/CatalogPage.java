@@ -4,16 +4,13 @@ import base.ScriptBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CatalogPage extends ScriptBase {
-
-
-
-
+    @FindBy(css ="#block_top_menu > ul > li:nth-child(1) > a") WebElement womenTab;
+    @FindBy(css ="#categories_block_left > h2") WebElement womenFilterTab;
 
     public CatalogPage(WebDriver driver){
         PageFactory.initElements(driver,this);
@@ -37,6 +34,22 @@ public class CatalogPage extends ScriptBase {
 
     }
 
+
+    public void womenCatalogeFilter(String filterCatagory,String dressCatagory,WebDriver driver){
+        womenTab.click();
+        if(womenFilterTab.isDisplayed()){
+            driver.findElement(By.xpath("//*[@id='categories_block_left']/div/ul/li/a[contains(text(),'"+filterCatagory+"')]")).click();
+            if (womenFilterTab.isDisplayed()){
+                driver.findElement(By.xpath("//*[@id='categories_block_left']/div/ul/li/a[contains(text(),'"+dressCatagory+"')]")).isDisplayed();
+            }else {
+                System.out.println("Women Filter tab not found "+womenFilterTab);
+            }
+
+        }else {
+            System.out.println("Women Filter Tab not found "+womenFilterTab);
+        }
+
+    }
 
 
 }

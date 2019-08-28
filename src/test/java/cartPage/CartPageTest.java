@@ -58,6 +58,13 @@ public class CartPageTest extends ScriptBase {
 
     }
 
+    @Test
+    public void verifyAddCart() throws InterruptedException{
+        cartPage=new CartPage(driver);
+        cartPage.addCart(driver);
+
+    }
+
 
 
 

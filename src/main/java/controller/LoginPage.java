@@ -25,7 +25,7 @@ public class LoginPage extends ScriptBase {
     @FindBy(id = "email")WebElement signupEmail;
     @FindBy(id = "passwd")WebElement signupPassword;
     @FindBy(css = "#submitAccount > span")WebElement submitRegisterButton;
-    @FindBy(xpath = "//*[@id=\"center_column\"]/div")WebElement invalidSignpErrorMessage;
+    @FindBy(xpath = "//*[@id='center_column']/div")WebElement invalidSignpErrorMessage;
 
 
 
