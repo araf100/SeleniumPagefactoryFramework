@@ -6,9 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import java.util.logging.Logger;
+
 public class SocialMediaPage extends ScriptBase {
 
-
+    public static final Logger log=Logger.getLogger(SocialMediaPage.class.getName());
 
     public SocialMediaPage(WebDriver driver){
         PageFactory.initElements(driver,this);
@@ -17,7 +19,9 @@ public class SocialMediaPage extends ScriptBase {
 
     public void followBySocialMedia(WebDriver driver, String block, String title){
         driver.findElement(By.xpath("//*[@class='"+block+"']")).click();
+        log.info("Follow by social media: "+block.toString());
         windowhandle(driver, title);
+        log.info("windowhandle : "+title.toString());
     }
 
 

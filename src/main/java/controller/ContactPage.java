@@ -9,7 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.util.logging.Logger;
+
 public class ContactPage extends ScriptBase {
+
+    public static final Logger log=Logger.getLogger(ContactPage.class.getName());
 
     @FindBy(css = "#contact-link > a")
     WebElement ContactUs;
@@ -27,11 +31,17 @@ public class ContactPage extends ScriptBase {
 
     public void customerContact(String email, String reference, String value){
         ContactUs.click();
+        log.info("Contact us Button clicked: "+ContactUs.toString());
         dropdown(subjectHeadingSelect,value);
+        log.info("dropdown Subject Heading: "+value.toString());
         emailInput.sendKeys(email);
+        log.info("Email input: "+email.toString());
         idOrder.sendKeys(reference);
+        log.info("Order reference: "+reference.toString());
         submitSend.click();
+        log.info("Click send Button to submit");
         Assert.assertEquals(oneErrorMessage,oneErrorMessage);
+        log.info("One Error Message Found");
 
     }
 

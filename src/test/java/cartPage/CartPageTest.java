@@ -18,50 +18,82 @@ public class CartPageTest extends ScriptBase {
 
     @Test
     public void verifyViewCart(){
+        log.info("#######---verifyViewCart test start----######");
         cartPage=new CartPage(driver);
         cartPage.viewCart(driver,"Summary");
+        log.info("#######---verifyViewCart test ended----######");
 
     }
 
     @Test
     public void verifyCartSummaryBar(){
+        log.info("#######---verifyCartSummaryBar test start----######");
         cartPage=new CartPage(driver);
         cartPage.viewCart(driver,"Summary");
+        log.info("#######---verifyCartSummaryBar test ended----######");
 
     }
 
     @Test
     public void verifyCartSigninBar(){
+        log.info("#######---verifyCartSigninBar test start----######");
         cartPage=new CartPage(driver);
         cartPage.viewCart(driver,"Sign in");
+        log.info("#######---verifyCartSigninBar test ended----######");
 
     }
 
     @Test
     public void verifyCartAddressBar(){
+        log.info("#######---verifyCartAddressBar test start----######");
         cartPage=new CartPage(driver);
         cartPage.viewCart(driver,"Address");
+        log.info("#######---verifyCartAddressBar test ended----######");
 
     }
 
     @Test
     public void verifyCartShippingBar(){
+        log.info("#######---verifyCartShippingBar test start----######");
         cartPage=new CartPage(driver);
         cartPage.viewCart(driver,"Shipping");
+        log.info("#######---verifyCartShippingBar test ended----######");
 
     }
 
     @Test
     public void verifyCartPaymentBar(){
+        log.info("#######---verifyCartPaymentBar test start----######");
         cartPage=new CartPage(driver);
         cartPage.viewCart(driver,"Payment");
+        log.info("#######---verifyCartPaymentBar test ended----######");
 
     }
 
     @Test
     public void verifyAddCart() throws InterruptedException{
+        log.info("#######---verifyAddCart test start----######");
         cartPage=new CartPage(driver);
         cartPage.addCart(driver);
+        log.info("#######---verifyAddCart test ended----######");
+
+    }
+
+    @Test
+    public void verifyCartProductBlouseQuantity(){
+        log.info("#######---verifyCartProductBlouseQuantity test start----######");
+        cartPage=new CartPage(driver);
+        cartPage.addCartWithMultipleQuantity(driver,"Blouse",10, "M", "Black");
+        log.info("#######---verifyCartProductBlouseQuantity test ended----######");
+
+
+    }
+    @Test
+    public void verifyCartProductChiffonDressQuantity(){
+        log.info("#######---verifyCartProductChiffonDressQuantity test start----######");
+        cartPage=new CartPage(driver);
+        cartPage.addCartWithMultipleQuantity(driver,"Printed Chiffon Dress",3, "L", "Yellow");
+        log.info("#######---verifyCartProductChiffonDressQuantity test ended----######");
 
     }
 

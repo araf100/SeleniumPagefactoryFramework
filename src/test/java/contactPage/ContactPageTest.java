@@ -18,8 +18,10 @@ public class ContactPageTest extends ScriptBase {
 
     @Test
     public void verifyCustomerContact(){
+        log.info("#######---verifyCustomerContact test start----######");
         contactPage=new ContactPage(driver);
         contactPage.customerContact("test@gmail.com","Ashraf Khan","Customer service");
+        log.info("#######---verifyCustomerContact test ended----######");
     }
 }
 

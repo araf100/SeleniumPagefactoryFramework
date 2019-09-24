@@ -1,0 +1,329 @@
+<html>
+<head>
+<title>TestNG:  /Users/ashraf/Documents/SeleniumPagefactoryFramework</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>/Users/ashraf/Documents/SeleniumPagefactoryFramework</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>50/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Sep 22 09:13:34 EDT 2019</td>
+</tr>
+<tr><td>Total time:</td><td>173 seconds (173337 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='homePage.homePageTest.SearchVerify()'><b>SearchVerify</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>1</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.homePageContactInfoVerify()'><b>homePageContactInfoVerify</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>1</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='login.LoginTest.invalidCreateAccountVerify()'><b>invalidCreateAccountVerify</b><br>Test class: login.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>login.LoginTest@192d43ce</td></tr>
+<tr>
+<td title='login.LoginTest.invalidLoginVerify()'><b>invalidLoginVerify</b><br>Test class: login.LoginTest</td>
+<td></td>
+<td>2</td>
+<td>login.LoginTest@192d43ce</td></tr>
+<tr>
+<td title='login.LoginTest.invalidSignUpAccountVerify()'><b>invalidSignUpAccountVerify</b><br>Test class: login.LoginTest</td>
+<td></td>
+<td>9</td>
+<td>login.LoginTest@192d43ce</td></tr>
+<tr>
+<td title='login.LoginTest.validLoginVerify()'><b>validLoginVerify</b><br>Test class: login.LoginTest</td>
+<td></td>
+<td>2</td>
+<td>login.LoginTest@192d43ce</td></tr>
+<tr>
+<td title='login.LoginTest.validLoginWithLogOutVerify()'><b>validLoginWithLogOutVerify</b><br>Test class: login.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>login.LoginTest@192d43ce</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyAboutUsButton()'><b>verifyAboutUsButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='cartPage.CartPageTest.verifyAddCart()'><b>verifyAddCart</b><br>Test class: cartPage.CartPageTest</td>
+<td></td>
+<td>7</td>
+<td>cartPage.CartPageTest@6973b51b</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyBestSellersButton()'><b>verifyBestSellersButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>1</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyBestsellersButton()'><b>verifyBestsellersButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyBlouseSearch()'><b>verifyBlouseSearch</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>1</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='cartPage.CartPageTest.verifyCartAddressBar()'><b>verifyCartAddressBar</b><br>Test class: cartPage.CartPageTest</td>
+<td></td>
+<td>7</td>
+<td>cartPage.CartPageTest@6973b51b</td></tr>
+<tr>
+<td title='cartPage.CartPageTest.verifyCartPaymentBar()'><b>verifyCartPaymentBar</b><br>Test class: cartPage.CartPageTest</td>
+<td></td>
+<td>1</td>
+<td>cartPage.CartPageTest@6973b51b</td></tr>
+<tr>
+<td title='cartPage.CartPageTest.verifyCartProductBlouseQuantity()'><b>verifyCartProductBlouseQuantity</b><br>Test class: cartPage.CartPageTest</td>
+<td></td>
+<td>2</td>
+<td>cartPage.CartPageTest@6973b51b</td></tr>
+<tr>
+<td title='cartPage.CartPageTest.verifyCartProductChiffonDressQuantity()'><b>verifyCartProductChiffonDressQuantity</b><br>Test class: cartPage.CartPageTest</td>
+<td></td>
+<td>2</td>
+<td>cartPage.CartPageTest@6973b51b</td></tr>
+<tr>
+<td title='cartPage.CartPageTest.verifyCartShippingBar()'><b>verifyCartShippingBar</b><br>Test class: cartPage.CartPageTest</td>
+<td></td>
+<td>1</td>
+<td>cartPage.CartPageTest@6973b51b</td></tr>
+<tr>
+<td title='cartPage.CartPageTest.verifyCartSigninBar()'><b>verifyCartSigninBar</b><br>Test class: cartPage.CartPageTest</td>
+<td></td>
+<td>11</td>
+<td>cartPage.CartPageTest@6973b51b</td></tr>
+<tr>
+<td title='cartPage.CartPageTest.verifyCartSummaryBar()'><b>verifyCartSummaryBar</b><br>Test class: cartPage.CartPageTest</td>
+<td></td>
+<td>11</td>
+<td>cartPage.CartPageTest@6973b51b</td></tr>
+<tr>
+<td title='catalogPage.CatalogPageTest.verifyCatalogDressDisplay()'><b>verifyCatalogDressDisplay</b><br>Test class: catalogPage.CatalogPageTest</td>
+<td></td>
+<td>5</td>
+<td>catalogPage.CatalogPageTest@1afd44cb</td></tr>
+<tr>
+<td title='catalogPage.CatalogPageTest.verifyCatalogTshirtDisplay()'><b>verifyCatalogTshirtDisplay</b><br>Test class: catalogPage.CatalogPageTest</td>
+<td></td>
+<td>5</td>
+<td>catalogPage.CatalogPageTest@1afd44cb</td></tr>
+<tr>
+<td title='catalogPage.CatalogPageTest.verifyCatalogWomenDisplay()'><b>verifyCatalogWomenDisplay</b><br>Test class: catalogPage.CatalogPageTest</td>
+<td></td>
+<td>5</td>
+<td>catalogPage.CatalogPageTest@1afd44cb</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyContactUsButton()'><b>verifyContactUsButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='contactPage.ContactPageTest.verifyCustomerContact()'><b>verifyCustomerContact</b><br>Test class: contactPage.ContactPageTest</td>
+<td></td>
+<td>12</td>
+<td>contactPage.ContactPageTest@72057ecf</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyCustomerService()'><b>verifyCustomerService</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyDressSearch()'><b>verifyDressSearch</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>1</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyHatSearch()'><b>verifyHatSearch</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>1</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyMyAddressesButton()'><b>verifyMyAddressesButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyMyCreditSlipsButton()'><b>verifyMyCreditSlipsButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyMyOrdersButton()'><b>verifyMyOrdersButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyMyPersonalinfoButton()'><b>verifyMyPersonalinfoButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyNewProductsButton()'><b>verifyNewProductsButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyOurStoresButton()'><b>verifyOurStoresButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyPopularButton()'><b>verifyPopularButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>1</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyShoeSearch()'><b>verifyShoeSearch</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>1</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifySitemapButton()'><b>verifySitemapButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='socialMediaPage.SocialMediaPageTest.verifySocialBlockFacebook()'><b>verifySocialBlockFacebook</b><br>Test class: socialMediaPage.SocialMediaPageTest</td>
+<td></td>
+<td>3</td>
+<td>socialMediaPage.SocialMediaPageTest@1ab3a8c8</td></tr>
+<tr>
+<td title='socialMediaPage.SocialMediaPageTest.verifySocialBlockGoogleplus()'><b>verifySocialBlockGoogleplus</b><br>Test class: socialMediaPage.SocialMediaPageTest</td>
+<td></td>
+<td>1</td>
+<td>socialMediaPage.SocialMediaPageTest@1ab3a8c8</td></tr>
+<tr>
+<td title='socialMediaPage.SocialMediaPageTest.verifySocialBlockTwitter()'><b>verifySocialBlockTwitter</b><br>Test class: socialMediaPage.SocialMediaPageTest</td>
+<td></td>
+<td>1</td>
+<td>socialMediaPage.SocialMediaPageTest@1ab3a8c8</td></tr>
+<tr>
+<td title='socialMediaPage.SocialMediaPageTest.verifySocialBlockYoutube()'><b>verifySocialBlockYoutube</b><br>Test class: socialMediaPage.SocialMediaPageTest</td>
+<td></td>
+<td>2</td>
+<td>socialMediaPage.SocialMediaPageTest@1ab3a8c8</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifySpecialsButton()'><b>verifySpecialsButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyTshirtButton()'><b>verifyTshirtButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='cartPage.CartPageTest.verifyViewCart()'><b>verifyViewCart</b><br>Test class: cartPage.CartPageTest</td>
+<td></td>
+<td>11</td>
+<td>cartPage.CartPageTest@6973b51b</td></tr>
+<tr>
+<td title='catalogPage.CatalogPageTest.verifyWomenBlousesDisplay()'><b>verifyWomenBlousesDisplay</b><br>Test class: catalogPage.CatalogPageTest</td>
+<td></td>
+<td>5</td>
+<td>catalogPage.CatalogPageTest@1afd44cb</td></tr>
+<tr>
+<td title='homePage.homePageTest.verifyWomenButton()'><b>verifyWomenButton</b><br>Test class: homePage.homePageTest</td>
+<td></td>
+<td>0</td>
+<td>homePage.homePageTest@5f058f00</td></tr>
+<tr>
+<td title='catalogPage.CatalogPageTest.verifyWomenCasualDressesDisplay()'><b>verifyWomenCasualDressesDisplay</b><br>Test class: catalogPage.CatalogPageTest</td>
+<td></td>
+<td>5</td>
+<td>catalogPage.CatalogPageTest@1afd44cb</td></tr>
+<tr>
+<td title='catalogPage.CatalogPageTest.verifyWomenEveningDressesDisplay()'><b>verifyWomenEveningDressesDisplay</b><br>Test class: catalogPage.CatalogPageTest</td>
+<td></td>
+<td>5</td>
+<td>catalogPage.CatalogPageTest@1afd44cb</td></tr>
+<tr>
+<td title='catalogPage.CatalogPageTest.verifyWomenFilerProduct()'><b>verifyWomenFilerProduct</b><br>Test class: catalogPage.CatalogPageTest</td>
+<td></td>
+<td>12</td>
+<td>catalogPage.CatalogPageTest@1afd44cb</td></tr>
+<tr>
+<td title='catalogPage.CatalogPageTest.verifyWomenSummerDressesDisplay()'><b>verifyWomenSummerDressesDisplay</b><br>Test class: catalogPage.CatalogPageTest</td>
+<td></td>
+<td>5</td>
+<td>catalogPage.CatalogPageTest@1afd44cb</td></tr>
+<tr>
+<td title='catalogPage.CatalogPageTest.verifyWomenTshirtsDisplay()'><b>verifyWomenTshirtsDisplay</b><br>Test class: catalogPage.CatalogPageTest</td>
+<td></td>
+<td>5</td>
+<td>catalogPage.CatalogPageTest@1afd44cb</td></tr>
+</table><p>
+</body>
+</html>
