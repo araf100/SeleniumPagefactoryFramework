@@ -8,7 +8,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.logging.Logger;
+
 public class CatalogPage extends ScriptBase {
+
+    public static final Logger log=Logger.getLogger(CatalogPage.class.getName());
+
     @FindBy(css ="#block_top_menu > ul > li:nth-child(1) > a") WebElement womenTab;
     @FindBy(css ="#categories_block_left > h2") WebElement womenFilterTab;
 
@@ -19,6 +24,7 @@ public class CatalogPage extends ScriptBase {
 
     public void catalogDisplay(WebDriver driver, String catalog_tab){
         mouseOver(driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li/a[contains(text(),'"+catalog_tab+"')]")),driver);
+        log.info("Mouse over: "+catalog_tab.toString());
     }
 
     public void mouseOver(WebElement element, WebDriver driver){
@@ -30,7 +36,9 @@ public class CatalogPage extends ScriptBase {
 
     public void womenCatagoryDisplay(WebDriver driver, String dress_catagory){
         mouseOver(driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li/a[contains(text(),'Women')]")),driver);
+        log.info("Mouse over: Women Catagory Display ");
         driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li/ul/li/ul/li/a[@title='"+dress_catagory+"']")).isDisplayed();
+        log.info("Dress Catagory Displayed: "+dress_catagory.toString());
 
     }
 
