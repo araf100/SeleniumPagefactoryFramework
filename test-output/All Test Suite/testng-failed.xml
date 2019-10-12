@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="sauceLabChrome"/>
   <test name="/Users/ashraf/Documents/SeleniumPagefactoryFramework(failed)">
+    <parameter name="browser" value="sauceLabChrome"/>
     <classes>
-      <class name="login.LoginTest">
-        <methods>
-          <include name="beforetest"/>
-          <include name="closebrowser"/>
-        </methods>
-      </class> <!-- login.LoginTest -->
-      <class name="cartPage.CartPageTest">
-        <methods>
-          <include name="verifyAddCart"/>
-          <include name="beforetest"/>
-          <include name="closebrowser"/>
-        </methods>
-      </class> <!-- cartPage.CartPageTest -->
       <class name="contactPage.ContactPageTest">
         <methods>
           <include name="beforetest"/>
+          <include name="beforeTest"/>
         </methods>
       </class> <!-- contactPage.ContactPageTest -->
+      <class name="catalogPage.CatalogPageTest">
+        <methods>
+          <include name="beforetest"/>
+          <include name="verifyWomenFilerProduct"/>
+          <include name="closebrowser"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- catalogPage.CatalogPageTest -->
       <class name="socialMediaPage.SocialMediaPageTest">
         <methods>
           <include name="beforetest"/>
           <include name="closebrowser"/>
+          <include name="beforeTest"/>
         </methods>
       </class> <!-- socialMediaPage.SocialMediaPageTest -->
       <class name="homePage.homePageTest">
         <methods>
           <include name="beforetest"/>
           <include name="closebrowser"/>
+          <include name="beforeTest"/>
         </methods>
       </class> <!-- homePage.homePageTest -->
-      <class name="catalogPage.CatalogPageTest">
+      <class name="cartPage.CartPageTest">
         <methods>
           <include name="beforetest"/>
           <include name="closebrowser"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- catalogPage.CatalogPageTest -->
+      </class> <!-- cartPage.CartPageTest -->
+      <class name="login.LoginTest">
+        <methods>
+          <include name="beforetest"/>
+          <include name="closebrowser"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- login.LoginTest -->
     </classes>
   </test> <!-- /Users/ashraf/Documents/SeleniumPagefactoryFramework(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
