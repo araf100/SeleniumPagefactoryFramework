@@ -36,8 +36,18 @@ public class CartPage extends ScriptBase {
     WebElement homePageButton;
     @FindBy(xpath = "//*[@id='quantity_wanted_p']//i[@class='icon-plus']")
     WebElement cartQuantityPlus;
+    @FindBy(xpath = "//*[@id='cart_quantity_down_2_9_0_0']/span")
+    WebElement cartQuantityMinus;
     @FindBy(xpath = "//*[@id='group_1']")
     WebElement sizeSelect;
+    @FindBy(xpath = "//*[@id='add_to_cart']/button/span")
+    WebElement addToCart;
+    @FindBy(xpath = "//*[@id='layer_cart']/div[1]/div[2]/h2/span[1]")
+    WebElement itemsInMyCarts;
+    @FindBy(xpath = "//*[@id='layer_cart']//a[@title='Proceed to checkout']")
+    WebElement proceedCheckout;
+    @FindBy(xpath = "//*[@id='cart_title']/span")
+    WebElement shoppingCartContains;
 
 
 
@@ -115,7 +125,40 @@ public class CartPage extends ScriptBase {
         addProductColor(driver, color);
         log.info("Product color added:"+color.toString());
 
+    }
 
+    public void removeCartWithMultipleQuantity(WebDriver driver,String addProduct,int quantity, String value, String color) throws InterruptedException {
+
+        homePageButton.click();
+        log.info("Home Page Button Clicked:"+homePageButton.toString());
+
+        addCartProduct(driver,addProduct);
+        log.info("Product add cart done:"+addProduct.toString());
+
+        productQuantity(cartQuantityPlus,quantity);
+        log.info("Product quantity added: 10");
+
+        dropdown(sizeSelect, value);
+        log.info("Product size added by dropdown");
+
+        addProductColor(driver, color);
+        log.info("Product color added:"+color.toString());
+
+        addToCart.click();
+        log.info("Add to Cart clicked: "+addToCart.toString());
+
+        Assert.assertEquals(itemsInMyCarts,itemsInMyCarts);
+        log.info("There is 10 products in your cart");
+        Thread.sleep(1000);
+
+        proceedCheckout.click();
+        log.info("Proceed to Checkout");
+
+        productQuantity(cartQuantityMinus,quantity);
+        log.info("Product quantity removed: 8");
+
+        Assert.assertEquals(shoppingCartContains,shoppingCartContains);
+        log.info("Your shopping cart contains: 2 Products message displayed");
 
     }
 
@@ -139,5 +182,6 @@ public class CartPage extends ScriptBase {
     public void addProductColor(WebDriver driver, String color){
         driver.findElement(By.xpath("//*[@title='"+color+"']")).click();
     }
+
 
 }
