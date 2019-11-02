@@ -13,12 +13,6 @@ public class CatalogPageTest extends ScriptBase {
     CatalogPage catalogPage;
 
 
-    @BeforeTest
-    public void beforetest() throws MalformedURLException {
-        //init();
-        //saucelab();
-    }
-
     @Test
     public void verifyCatalogWomenDisplay(){
         log.info("#######---verifyCatalogWomenDisplay test start----######");
@@ -105,8 +99,7 @@ public class CatalogPageTest extends ScriptBase {
 
     @AfterTest
     public void closebrowser(){
-        //driver.close();
-        //driver.quit();
+        driver.quit();
     }
 
 

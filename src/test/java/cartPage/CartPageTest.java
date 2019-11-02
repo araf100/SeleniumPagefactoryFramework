@@ -14,9 +14,9 @@ public class CartPageTest extends ScriptBase {
     CartPage cartPage;
 
     @BeforeTest
-    public void beforetest() throws MalformedURLException {
+    public void beforetest(){
         //init();
-        //saucelab();
+
     }
 
     @Test
@@ -115,8 +115,7 @@ public class CartPageTest extends ScriptBase {
 
     @AfterTest
     public void closebrowser(){
-        //driver.close();
-        //driver.quit();
+        driver.quit();
     }
 
 

@@ -120,18 +120,24 @@ public class HomePage extends ScriptBase {
     }
 
     public void informationSearch(WebDriver driver,String categorySelect){
+        homepageNavigation.click();
+        log.info("Homepage Navigation: "+homepageNavigation.toString());
         driver.findElement(By.xpath("//*[@id='block_various_links_footer']//a[@title='"+categorySelect+"']")).isDisplayed();
         log.info("Information search: "+categorySelect.toString());
 
     }
 
     public void accountSearch(WebDriver driver,String categorySelect){
+        homepageNavigation.click();
+        log.info("Homepage Navigation: "+homepageNavigation.toString());
         driver.findElement(By.xpath("//*[@id='footer']//a[@title='"+categorySelect+"']")).isDisplayed();
         log.info("Account search: "+categorySelect.toString());
 
     }
 
     public void customerService(){
+        homepageNavigation.click();
+        log.info("Homepage  Button clicked: "+homepageNavigation.toString());
         ContactUs.click();
         log.info("Contact us Button clicked: "+ContactUs.toString());
         Assert.assertEquals(customerService,customerService);

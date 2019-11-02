@@ -4,20 +4,12 @@ import base.ScriptBase;
 import controller.LoginPage;
 import controller.SocialMediaPage;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.net.MalformedURLException;
 
 public class SocialMediaPageTest extends ScriptBase {
 
     SocialMediaPage socialMediaPage;
-
-    @BeforeTest
-    public void beforetest() throws MalformedURLException {
-        //init();
-        //saucelab();
-    }
 
     @Test
     public void verifySocialBlockFacebook(){
@@ -56,15 +48,9 @@ public class SocialMediaPageTest extends ScriptBase {
     }
 
 
-
-
     @AfterTest
     public void closebrowser(){
-        //driver.close();
-        //driver.quit();
+        driver.quit();
     }
-
-
-
 
 }
