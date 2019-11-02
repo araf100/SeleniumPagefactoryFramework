@@ -13,11 +13,6 @@ public class ContactPageTest extends ScriptBase {
 
     ContactPage contactPage;
 
-    @BeforeTest
-    public void beforetest() throws MalformedURLException {
-        //init();
-        //saucelab();
-    }
 
     @Test
     public void verifyCustomerContact(){
@@ -25,6 +20,11 @@ public class ContactPageTest extends ScriptBase {
         contactPage=new ContactPage(driver);
         contactPage.customerContact("test@gmail.com","Ashraf Khan","Customer service");
         log.info("#######---verifyCustomerContact test ended----######");
+    }
+
+    @AfterTest
+    public void closebrowser(){
+        driver.quit();
     }
 }
 

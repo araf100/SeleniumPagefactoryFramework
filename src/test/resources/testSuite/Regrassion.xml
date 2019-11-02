@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="/Users/ashraf/Documents/SeleniumPagefactoryFramework">
-        <parameter name="browser" value="sauceLabChrome"></parameter>
+<suite name="All Test Suite" parallel="tests" thread-count="6">
+    <parameter name="browser" value="chrome"></parameter>
+    <test name="homePageTest">
         <classes>
             <class name="homePage.homePageTest">
                 <methods>
@@ -30,6 +30,11 @@
                     <include name="verifyCustomerService"/>
                 </methods>
             </class>
+        </classes>
+    </test>
+    <test name="LoginTest">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
             <class name="login.LoginTest">
                 <methods>
                     <include name="invalidLoginVerify"/>
@@ -39,11 +44,23 @@
                     <include name="invalidSignUpAccountVerify"/>
                 </methods>
             </class>
+        </classes>
+    </test>
+
+    <test name="ContactPageTest">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
             <class name="contactPage.ContactPageTest">
                 <methods>
                     <include name="verifyCustomerContact"/>
                 </methods>
             </class>
+        </classes>
+    </test>
+
+    <test name="CatalogPageTest">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
             <class name="catalogPage.CatalogPageTest">
                 <methods>
                     <include name="verifyCatalogWomenDisplay"/>
@@ -57,19 +74,31 @@
                     <include name="verifyWomenFilerProduct"/>
                 </methods>
             </class>
-            <class name="cartPage.CartPageTest">
-                <methods>
-                    <include name="verifyViewCart"/>
-                    <include name="verifyCartSummaryBar"/>
-                    <include name="verifyCartSigninBar"/>
-                    <include name="verifyCartAddressBar"/>
-                    <include name="verifyCartShippingBar"/>
-                    <include name="verifyCartPaymentBar"/>
-                    <include name="verifyAddCart"/>
-                    <include name="verifyCartProductBlouseQuantity"/>
-                    <include name="verifyCartProductChiffonDressQuantity"/>
-                </methods>
-            </class>
+        </classes>
+    </test>
+
+    <test name="CartPageTest">
+        <parameter name="browser" value="chrome"></parameter>
+    <classes>
+        <class name="cartPage.CartPageTest">
+            <methods>
+                <include name="verifyViewCart"/>
+                <include name="verifyCartSummaryBar"/>
+                <include name="verifyCartSigninBar"/>
+                <include name="verifyCartAddressBar"/>
+                <include name="verifyCartShippingBar"/>
+                <include name="verifyCartPaymentBar"/>
+                <include name="verifyAddCart"/>
+                <include name="verifyCartProductBlouseQuantity"/>
+                <include name="verifyCartProductChiffonDressQuantity"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+
+    <test name="SocialMediaPageTest">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
             <class name="socialMediaPage.SocialMediaPageTest">
                 <methods>
                     <include name="verifySocialBlockFacebook"/>

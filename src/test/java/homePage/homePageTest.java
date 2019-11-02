@@ -11,11 +11,6 @@ import java.net.MalformedURLException;
 public class homePageTest extends ScriptBase {
     HomePage homePage;
 
-    @BeforeTest
-    public void beforetest() throws MalformedURLException {
-        //init();
-        //saucelab();
-    }
 
 
     @Test
@@ -208,8 +203,7 @@ public class homePageTest extends ScriptBase {
 
     @AfterTest
     public void closebrowser(){
-        //driver.close();
-        //driver.quit();
+        driver.quit();
     }
 
 

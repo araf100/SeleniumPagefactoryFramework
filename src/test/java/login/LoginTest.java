@@ -11,11 +11,6 @@ import java.net.MalformedURLException;
 public class LoginTest extends ScriptBase {
     LoginPage loginPage;
 
-    @BeforeTest
-    public void beforetest() throws MalformedURLException {
-        //init();
-        //saucelab();
-    }
 
 
     @Test
@@ -58,10 +53,10 @@ public class LoginTest extends ScriptBase {
         loginPage.invalidSignup("test420@gmail.com",driver,"Ashraf","Khan","test420@gmail.com","admin1234");
         log.info("#######---invalidSignUpAccountVerify test ended----######");
     }
+
     @AfterTest
     public void closebrowser(){
-        //driver.close();
-        //driver.quit();
+        driver.quit();
     }
 
 
