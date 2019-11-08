@@ -1,6 +1,5 @@
 package login;
 
-import base.ScriptBaseTwo;
 import org.testng.annotations.Test;
 
 public class LoginTestTwo extends ScriptBaseTwo {

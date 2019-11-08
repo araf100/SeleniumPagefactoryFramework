@@ -26,7 +26,9 @@ import java.util.logging.Logger;
       public static final String ACCESS_KEY="3c1460c4-08df-456c-9a8f-7b987bf90f25";
       public static final String URL="http://"+USERNAME+":"+ACCESS_KEY+"@ondemand.saucelabs.com:80/wd/hub";
 
-
+       public WebDriver getDriver() {
+           return driver;
+       }
 
        @Parameters("browser")
        @BeforeClass
