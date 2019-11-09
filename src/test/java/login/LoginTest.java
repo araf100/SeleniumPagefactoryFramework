@@ -14,7 +14,7 @@ public class LoginTest extends ScriptBase {
 
 
     @Test
-    public void invalidLoginVerify(){
+    public void verifyInvalidLogin(){
         log.info("#######---invalidLoginVerify test start----######");
         loginPage=new LoginPage(driver);
         loginPage.invalidSignin("test@gmail.com","abdc1234");
