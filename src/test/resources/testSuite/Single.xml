@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" parallel="tests">
+
     <listeners>
         <listener class-name="reporting.Listeners.Listener"></listener>
         <listener class-name="reporting.Listeners.AnnotationTransformer"></listener>
     </listeners>
-    <test name="homePageTest">
+    <parameter name="browser" value="chrome"></parameter>
+    <test name="Single">
         <classes>
-            <class name="homePage.homePageTest">
+            <class name="login.LoginTest">
                 <methods>
-                    <include name="verifyCustomerService"/>
+                    <include name="verifyInvalidLogin"/>
                 </methods>
-
             </class>
         </classes>
     </test>

@@ -5,6 +5,7 @@ import controller.LoginPage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import reporting.ExtentsReports.ExtentTestManager;
 
 import java.net.MalformedURLException;
 
@@ -13,8 +14,9 @@ public class LoginTest extends ScriptBase {
 
 
 
-    @Test
+    @Test (alwaysRun = true,priority = 1,description = "Verify Invalid Login Test")
     public void verifyInvalidLogin(){
+        ExtentTestManager.startTest("verifyInvalidLogin","Invalid Login Scenario with empty username and password");
         log.info("#######---invalidLoginVerify test start----######");
         loginPage=new LoginPage(driver);
         loginPage.invalidSignin("test@gmail.com","abdc1234");
@@ -23,7 +25,7 @@ public class LoginTest extends ScriptBase {
     }
 
     @Test
-    public void validLoginVerify(){
+    public void verifyValidLogin(){
         log.info("#######---validLoginVerify test start----######");
         loginPage=new LoginPage(driver);
         loginPage.validSignin("futureitgroup@gmail.com","admin123");
