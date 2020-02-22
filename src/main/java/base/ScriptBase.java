@@ -52,5 +52,6 @@ import java.util.logging.Logger;
            driver.get("http://automationpractice.com/index.php");
 
        }
+       //Test
    }
 
